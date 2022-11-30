@@ -5,11 +5,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Desafio 01</title>
 </head>
 
 <body>
+    <main class="container">
+        <div class="carousel">
+            <div onclick="ante()" id="arrowLeft" class="arrow">
+                <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" width="24px">
+            </div>
+            <div class="card">
+                <img id="img_carousel" src="#" alt="#" height="200px" width="300px">
+                <div class="describe">
+                    <p>ano: <span id="ano"></span></p>
+                    <p>cor: <span id="cor"></span></p>
+                    <p>marca: <span id="marca"></span></p>
+                    <p>modelo: <span id="modelo"></span></p>
+                    <p>placa: <span id="placa"></span></p>
+                </div>
+            </div>
+            <div onclick="prox()" id="arrowRight" class="arrow">
+                <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" width="24px">
+            </div>
+        </div>
 
+    </main>
     <script src="scripts/index.js"></script>
 </body>
 
