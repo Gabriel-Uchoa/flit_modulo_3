@@ -1,0 +1,30 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color:  #dedede;
+    display: flex;
+    transition: 0.3s;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.describe{
+    padding: 20px;
+}
+
+.card:hover{
+    height: 400px;
+}
