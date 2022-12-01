@@ -1,61 +1,39 @@
 const img_carousel = document.getElementById('img_carousel')
 const arrow_right = document.getElementById('arrowRight')
+const arrow_left = document.getElementById('arrowLeft')
 const describes = document.querySelectorAll('span')
 let contador = 0
-fetch("./carros.json")
-    .then(response => {
-        return response.json();
-    })
-    .then(jsondata => nextCard(jsondata, contador));
-function addContador() {
-    contador = contador + 1;
-    console.log(contador)
-}
-function subContador() {
-    contador = contador - 1;
-    console.log(contador)
-}
-function verificarContador(num) {
-    if (num > 4) {
-        contador = 0;
-    }
-    if (num === -1) {
-        contador = 5;
-    }
-}
-function nextCard(data, position) {
 
-    for (let i = 0; i < describes.length; i++) {
-        let element = document.getElementById(describes[i].id)
-        element.textContent = data[position][describes[i].id]
+function changeDataCards() {
+    fetch('./carros.json')
+        .then((response) => response.json())
+        .then((data) => {
+            verifyContador(data.length)
+            for (let i = 0; i < describes.length; i++) {
+                let element = document.getElementById(describes[i].id)
+                element.textContent = data[contador][describes[i].id]
+            }
+            img_carousel.src = data[contador]["imagem"]
+        });
+}
+function nextCard() {
+    changeDataCards()
+    contador = contador + 1
+}
+function previosCard() {
+    changeDataCards()
+    contador = contador - 1
+}
+function verifyContador(numMax) {
+    if (contador < 0) {
+        contador = (numMax - 1)
     }
-    img_carousel.src = data[position]["imagem"]
-}
-function anterCard(data, position) {
-    for (let i = 0; i < describes.length; i++) {
-        let element = document.getElementById(describes[i].id)
-        element.textContent = data[position][describes[i].id]
+    if (contador > (numMax - 1)) {
+        contador = 0
     }
-    img_carousel.src = data[position]["imagem"]
-
 }
-
-
-function prox() {
-    verificarContador(contador)
-    addContador()
-    fetch("./carros.json")
-        .then(response => {
-            return response.json();
-        })
-        .then(jsondata => nextCard(jsondata, contador));
+if (contador === 0) {
+    changeDataCards()
 }
-function ante() {
-    verificarContador(contador)
-    subContador()
-    fetch("./carros.json")
-        .then(response => {
-            return response.json();
-        })
-        .then(jsondata => anterCard(jsondata, contador));
-}
+arrow_right.addEventListener('click', nextCard)
+arrow_left.addEventListener('click', previosCard)

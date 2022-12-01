@@ -1,18 +1,33 @@
+.header{
+    height: 15vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
 .container {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: aqua;
 }
-.carousel{
+/*STYLE HOME*/
+.carousel {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card{
-    background-color:  #dedede;
+#img_carousel {
+    width: 300px;
+    height: 200px;
+
+}
+
+.card {
+    background-color: dimgrey;
     display: flex;
     transition: 0.3s;
     flex-direction: column;
@@ -21,10 +36,35 @@
     overflow: hidden;
 }
 
-.describe{
+.describe {
+    display: none;
+    transition: 0.3s;
+    font-size: small;
     padding: 20px;
 }
 
-.card:hover{
-    height: 400px;
+.card:hover {
+    height: 320px;
+}
+
+.card:hover .describe {
+    display: flex;
+    flex-direction: column;
+}
+
+/*STYLE CADASTRO*/
+.forms{
+    background-color: gainsboro;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 10px;
+}
+.inputForms{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
 }

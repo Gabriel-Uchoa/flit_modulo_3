@@ -11,26 +11,30 @@
 </head>
 
 <body>
+    <header class="header">
+        <nav class="menu">
+            <a href="./pages/cadastro.html">Cadastro</a>
+        </nav>
+    </header>
     <main class="container">
         <div class="carousel">
-            <div onclick="ante()" id="arrowLeft" class="arrow">
+            <div id="arrowLeft" class="arrow">
                 <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" width="24px">
             </div>
             <div class="card">
-                <img id="img_carousel" src="#" alt="#" height="200px" width="300px">
+                <img id="img_carousel" src="#" alt="#">
                 <div class="describe">
-                    <p>ano: <span id="ano"></span></p>
-                    <p>cor: <span id="cor"></span></p>
-                    <p>marca: <span id="marca"></span></p>
-                    <p>modelo: <span id="modelo"></span></p>
-                    <p>placa: <span id="placa"></span></p>
+                    <p><b>Ano:</b> <span id="ano"></span></p>
+                    <p><b>Cor:</b> <span id="cor"></span></p>
+                    <p><b>Marca:</b> <span id="marca"></span></p>
+                    <p><b>Modelo:</b> <span id="modelo"></span></p>
+                    <p><b>Placa:</b> <span id="placa"></span></p>
                 </div>
             </div>
-            <div onclick="prox()" id="arrowRight" class="arrow">
+            <div id="arrowRight" class="arrow">
                 <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" width="24px">
             </div>
         </div>
-
     </main>
     <script src="scripts/index.js"></script>
 </body>
