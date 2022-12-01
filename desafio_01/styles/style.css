@@ -1,11 +1,19 @@
+.header{
+    height: 15vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
 .container {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: aqua;
 }
-
+/*STYLE HOME*/
 .carousel {
     display: flex;
     justify-content: center;
@@ -41,5 +49,22 @@
 
 .card:hover .describe {
     display: flex;
+    flex-direction: column;
+}
+
+/*STYLE CADASTRO*/
+.forms{
+    background-color: gainsboro;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 10px;
+}
+.inputForms{
+    display: flex;
+    width: 80%;
     flex-direction: column;
 }
