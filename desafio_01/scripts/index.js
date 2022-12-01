@@ -8,12 +8,10 @@ function changeDataCards() {
     fetch('./carros.json')
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
             verifyContador(data.length)
             for (let i = 0; i < describes.length; i++) {
                 let element = document.getElementById(describes[i].id)
                 element.textContent = data[contador][describes[i].id]
-                
             }
             img_carousel.src = data[contador]["imagem"]
         });

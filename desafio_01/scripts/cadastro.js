@@ -22,8 +22,9 @@ function submitForms(e) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(objToSend)
     }).then(res => {
-        console.log("Request complete! response:", res);
+        alert("Veículo cadastrado com sucesso!")
     });
+    document.getElementById("forms").reset()
 }
 
 for (let i = 0; i < inputs.length; i++) {
