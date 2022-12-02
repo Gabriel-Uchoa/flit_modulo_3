@@ -1,4 +1,14 @@
 const calc = require('./calcTravel')
+const peopleArr = ["adulto", "crianca", "crianca", "crianca"]
 
-console.log("Litros de Combustivel Consumidos: ", calc.fuelConsume(32000, "gasolina"))
-console.log("Número de paradas: ", calc.numberStops([0, 1, 1, 1], 4))
+try {
+    const fuelConsume = calc.fuelConsume(32000, "etanol")
+    const numberStops = calc.numberStops(peopleArr, 3)
+    const costTotal = calc.costTotal(numberStops, peopleArr)
+
+    console.log("Combustivel necessário em litros: ", fuelConsume)
+    console.log("Número de paradas: ", numberStops)
+    console.log("Gasto total com refeições:", costTotal)
+} catch (error) {
+    console.log(error.message)
+}
