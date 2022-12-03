@@ -1,0 +1,75 @@
+/*
+verde: #DBF227
+azul escuro: #042940
+cinza claro: #EEEEEE
+cinza escuro: #D9D9D9
+*/
+.header {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    background-color: #042940;
+}
+
+.logo {
+    width: 4rem;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+    background-color: #EEEEEE;
+}
+
+.bodyCalc {
+    width: 300px;
+    margin-top: 10px;
+    height: 400px;
+    padding: 10px;
+    background-color: #5A5C68;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20%;
+    font-size: xx-large;
+    padding: 20px;
+    background-color: #C1D798;
+    border-radius: 20px;
+}
+
+.keyboard {
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 10px;
+}
+
+.key {
+    padding: 20%;
+    font-size: xx-large;
+    background-color: #3D4049;
+    border-radius: 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+.key:hover {
+    cursor: pointer;
+    box-shadow: inset rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.operations {
+    background-color: #BCC0C7;
+}

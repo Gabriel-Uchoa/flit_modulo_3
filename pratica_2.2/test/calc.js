@@ -14,4 +14,4 @@ function divisao(num1, num2) {
     return num1 / num2
 }
 
-export { soma, subtracao, multiplicacao, divisao }
+module.exports = { soma, subtracao, multiplicacao, divisao }
