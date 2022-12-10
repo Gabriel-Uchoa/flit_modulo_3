@@ -28,8 +28,6 @@ function SearchMarcasAvailable(arroObj: Array<carro>) {
     return [...new Set(arroObj.map(x => x.marca))];
 }
 
-const propriedades = ["marca", "modelo", "nome", "cor"] as const
-
 function SearchCarsAvailableForFilter(arrObj: Array<carro>, filter: Array<string>) {
     let carros: Array<object> = []
     arrObj.forEach(function (carro) {
