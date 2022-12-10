@@ -1,6 +1,6 @@
-function tabuada(num: number) {
-    var contador = 1
-    var resultTabuada = []
+function tabuada(num: number): object {
+    var contador: number = 1
+    var resultTabuada: Array<number> = []
     while (contador <= 10) {
         resultTabuada.push(num * contador)
         resultTabuada.push((num + 1) * contador)
@@ -12,9 +12,9 @@ function tabuada(num: number) {
 
 console.log(tabuada(5))
 
-function PontoDeOnibus(arr: Array<Array<number>>){
-    var numPessoasQueEntraram = 0
-    var numPessoasQueSairam = 0
+function PontoDeOnibus(arr: Array<Array<number>>): number {
+    var numPessoasQueEntraram: number = 0
+    var numPessoasQueSairam: number = 0
 
     arr.forEach(element => {
         numPessoasQueEntraram = numPessoasQueEntraram + element[0]
@@ -26,8 +26,8 @@ function PontoDeOnibus(arr: Array<Array<number>>){
 }
 console.log(PontoDeOnibus([[10, 0], [3, 5], [5, 8]]))
 
-function Bingo(arr: Array<number>) {
-    const arrSemRepeticao = [...new Set(arr)];
+function Bingo(arr: Array<number>): string {
+    const arrSemRepeticao: Array<number> = [...new Set(arr)];
     var bingo = 0
     for (let i = 0; i < arrSemRepeticao.length; i++) {
         if (
