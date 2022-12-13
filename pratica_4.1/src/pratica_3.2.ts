@@ -43,3 +43,5 @@ function SearchCarsAvailableForFilter(arrObj: Array<carro>, filter: Array<string
 console.log(SearchCarsForMarca(carros, "troller"))
 console.log(SearchMarcasAvailable(carros))
 console.log(SearchCarsAvailableForFilter(carros, ["marca", "cor", "nome"]))
+
+module.exports = { SearchCarsAvailableForFilter, SearchMarcasAvailable, SearchCarsForMarca }

@@ -20,7 +20,6 @@ function SearchCarsForMarca(arroObj, filter) {
 function SearchMarcasAvailable(arroObj) {
     return [...new Set(arroObj.map(x => x.marca))];
 }
-const propriedades = ["marca", "modelo", "nome", "cor"];
 function SearchCarsAvailableForFilter(arrObj, filter) {
     let carros = [];
     arrObj.forEach(function (carro) {
@@ -35,4 +34,5 @@ function SearchCarsAvailableForFilter(arrObj, filter) {
 console.log(SearchCarsForMarca(carros, "troller"));
 console.log(SearchMarcasAvailable(carros));
 console.log(SearchCarsAvailableForFilter(carros, ["marca", "cor", "nome"]));
+module.exports = { SearchCarsAvailableForFilter, SearchMarcasAvailable, SearchCarsForMarca };
 //# sourceMappingURL=pratica_3.2.js.map
