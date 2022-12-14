@@ -53,3 +53,16 @@ body {
 .card:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+@media screen and (max-width: 1000px) {
+    .grid_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .grid_cards {
+        display: flex;
+        flex-direction: column;
+    }
+}
