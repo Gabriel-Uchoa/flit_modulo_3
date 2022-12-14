@@ -60,7 +60,7 @@ body {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .grid_cards {
         display: flex;
         flex-direction: column;
