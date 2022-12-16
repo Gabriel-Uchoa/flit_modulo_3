@@ -131,8 +131,11 @@ async function searchStudentsPerDeliveredOfTasks(task) {
     }
 }
 
-var findAllActivitiesPerStudent = findAllActivitiesPerStudent(5)
-var gradeAveragePerStudent = gradeAveragePerStudent(5)
-var searchTasksPending = searchTasksPending(5)
-var searchStudentsPerDeliveredOfTasks = searchStudentsPerDeliveredOfTasks("Colocando em prática 2.3")
+async function exec() {
+    await findAllActivitiesPerStudent(5)
+    await gradeAveragePerStudent(5)
+    await searchTasksPending(5)
+    await searchStudentsPerDeliveredOfTasks("Colocando em prática 2.3")
+}
 
+exec()
